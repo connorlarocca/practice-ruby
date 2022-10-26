@@ -12,11 +12,11 @@ class Car
   attr_reader :make, :model, :color, :price
   attr_writer :price
 
-  def initialize(input_make, input_model, input_color, input_price)
-    @make = input_make
-    @model = input_model
-    @color = input_color
-    @price = input_price
+  def initialize(input_options)
+    @make = input_options[:make]
+    @model = input_options[:model]
+    @color = input_options[:color]
+    @price = input_options[:price]
   end
 
   # def make
@@ -35,14 +35,14 @@ class Car
   #   @price
   # end
 
-  def price=(input_price)
-    @price = input_price
-  end
+  # def price=(input_price)
+  #   @price = input_price
+  # end
 end
 
-car1 = Car.new("Honda", "Accord", "blue", 25000)
-car2 = Car.new("Hyundai", "Kona", "black", 22000)
-car3 = Car.new("Nissan", "Ultima", "red", 28000)
+car1 = Car.new(make: "Honda", model: "Accord", color: "blue", price: 25000)
+# car2 = Car.new("Hyundai", "Kona", "black", 22000)
+# car3 = Car.new("Nissan", "Ultima", "red", 28000)
 puts car1.make
 puts car1.model
 puts car1.color
