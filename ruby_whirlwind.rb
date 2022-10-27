@@ -6,7 +6,9 @@ puts "Give us your 5 favorite foods!"
   foods << food
 end
 index = 0
+num = 1
 while index < foods.length
-  puts "I love #{foods[index]}"
+  puts "#{num}. " + foods[index]
+  num += 1
   index += 1
 end
